@@ -1,0 +1,113 @@
+body {
+    font-family: serif;
+    /*background-color: #f5f5f5;*/
+    background-color: rgba(248, 235, 199, 1);
+}
+
+#header {
+    background-image: url("https://blog-1256551299.cos.ap-chongqing.myqcloud.com/header.png");
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 60px 80px;
+    position: relative;
+    box-shadow: 0 3px 3px rgba(20, 20, 20, 0.3) inset;
+}
+
+#header #nav {
+    position: absolute;
+    right: 80px;
+    top: 60px;
+}
+
+#header #nav a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    background-color: transparent;
+    padding: 5px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color .3s;
+    -o-transition: color .3s;
+    -moz-transition: color .3s;
+    -webkit-transition: color .3s;
+    /*transition: background-color .3s;*/
+    /*-o-transition: background-color .3s;*/
+    /*-moz-transition: background-color .3s;*/
+    /*-webkit-transition: background-color .3s;*/
+}
+
+#header #nav a:hover {
+    color: #37a;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(20, 20, 20, 0.6);
+}
+
+
+#header h1 {
+    color: #37a;
+    margin-bottom: 30px;
+    font-family: serif;
+    font-size: 30px;
+}
+
+#header p {
+    color: #555;
+    margin-right: 200px;
+    text-indent: 2em;
+    font-family: serif;
+}
+
+#header p a {
+    text-decoration: none;
+    color: #6FA4CA;
+    margin-left: 2px;
+    margin-right: 2px;
+    transition: color .3s;
+    -o-transition: color .3s;
+    -moz-transition: color .3s;
+    -webkit-transition: color .3s;
+}
+
+#header p a:hover {
+    color: #24597F;
+}
+
+#header p .em {
+    color: #DA6D6D;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#footer {
+    text-align: center;
+    color: white;
+    background-color: #333;
+    padding: 20px;
+    font-size: 15px;
+}
+
+#footer p {
+    margin-bottom: 0;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #6FA4CA;
+    margin-left: 2px;
+    margin-right: 2px;
+    transition: color .3s;
+    -o-transition: color .3s;
+    -moz-transition: color .3s;
+    -webkit-transition: color .3s;
+}
+
+#footer p a:hover {
+    color: #24597F;
+}
+/*.container {*/
+/*    box-shadow: 0 5px 25px 5px rgba(214, 215, 216, 0.6);*/
+
+/*}*/

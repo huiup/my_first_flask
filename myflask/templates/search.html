@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>书籍搜索</title>
+    <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet"/>
+    <script src="{{ url_for('static',filename='js/jquery-3.5.1.min.js') }}"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://blog-1256551299.cos.ap-chongqing.myqcloud.com/b1.png");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.7);
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+        }
+
+        .search-btn {
+            color: rgba(255, 199, 0, 1);
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            text-decoration: none;
+        }
+        .back-btn {
+            color: rgba(255, 199, 0, 1);
+            float: left;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            {#background: rgba(222,222,222,0.5);#}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            text-decoration: none;
+        }
+        .search-txt {
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: rgba(1, 1, 1, 0.7);
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 240px;
+        }
+
+        {#.search-box:hover > .search-txt {#}
+        {#    width: 240px;#}
+        {#    padding: 0 6px;#}
+        {#}#}
+
+        .search-box:hover > .search-btn {
+            background: white;
+        }
+        .back-btn:hover {
+            background: rgb(81, 63, 49);
+        }
+
+    </style>
+</head>
+<body>
+<a class="back-btn" href="/">
+<i class="fa fa-fast-backward" aria-hidden="true"></i></a>
+<div class="search-box">
+
+    <input class="search-txt" type="text" placeholder="  请输入书名"/>
+    <a class="search-btn" href="#">
+        <i class="fas fa-search"></i>
+    </a>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.search-box .search-btn').click(function () {
+            var temp = $('.search-box  .search-txt').val();
+            var url_string = "https://search.douban.com/book/subject_search?search_text=bookname".replace('bookname', temp)
+            if (temp == "") {
+                alert('给个关键字呗！')
+            } else {
+                window.open(url_string)
+            }
+        })
+    })
+</script>
+</body>
+</html>
